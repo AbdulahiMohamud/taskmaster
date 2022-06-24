@@ -1,3 +1,5 @@
+## TASKMASTER  - ABDULAHI MOHAMUD
+
 ## Lab 26
 
 
@@ -5,3 +7,10 @@
 ![Add tasks](screenshots/Screen Shot 2022-06-22 at 3.44.30 PM.png)
 ![Tasks added](screenshots/Screen Shot 2022-06-22 at 3.44.36 PM.png)
 ![All Tasks](screenshots/Screen Shot 2022-06-22 at 3.44.48 PM.png)
+
+## Lab 27
+
+
+![Home page](screenshots/homePage.png)
+![Task Details](screenshots/taskDetails.png)
+![User Setting](screenshots/userSetting.png)
