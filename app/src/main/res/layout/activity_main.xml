@@ -7,51 +7,89 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="157dp"
-        android:layout_height="41dp"
-        android:text="My Tasks"
+        android:id="@+id/homeTaskTitle"
+        android:layout_width="297dp"
+        android:layout_height="82dp"
+        android:text="@string/my_tasks"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintVertical_bias="0.094" />
 
     <Button
         android:id="@+id/addTaskButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:text="ADD TASK"
+        android:layout_marginEnd="88dp"
+        android:text="@string/add_task"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/allTaskButton"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.749" />
+        app:layout_constraintTop_toBottomOf="@+id/cleanTaskButton"
+        app:layout_constraintVertical_bias="0.714" />
 
     <Button
         android:id="@+id/allTaskButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ALL TASK"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="48dp"
+        android:text="@string/all_task"
+        app:layout_constraintBottom_toBottomOf="@+id/addTaskButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.355"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/addTaskButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.749" />
+        app:layout_constraintTop_toTopOf="@+id/addTaskButton"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="179dp"
-        android:layout_height="169dp"
-        android:layout_marginTop="240dp"
+    <Button
+        android:id="@+id/gymTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gym"
+        app:layout_constraintBottom_toBottomOf="@+id/studyTaskButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/studyTaskButton" />
+
+    <Button
+        android:id="@+id/studyTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/study"
+        app:layout_constraintBottom_toBottomOf="@+id/cleanTaskButton"
+        app:layout_constraintEnd_toStartOf="@+id/gymTaskButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cleanTaskButton" />
+
+    <Button
+        android:id="@+id/cleanTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="81dp"
+        android:text="@string/clean"
+        app:layout_constraintEnd_toStartOf="@+id/studyTaskButton"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeTaskTitle" />
+
+    <ImageButton
+        android:id="@+id/goToUserSettingButton"
+        android:layout_width="78dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="124dp"
+        android:backgroundTint="#D61313"
+        android:contentDescription="@string/todo"
+        app:layout_constraintBottom_toTopOf="@+id/gymTaskButton"
+        app:layout_constraintStart_toEndOf="@+id/homeTaskTitle"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
