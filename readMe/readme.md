@@ -14,3 +14,10 @@
 ![Home page](screenshots/homePage.png)
 ![Task Details](screenshots/taskDetails.png)
 ![User Setting](screenshots/userSetting.png)
+
+## Lab 28
+
+
+![Recyclerviewlist](screenshots/Recyclerviewlist.png)
+![Task Details](screenshots/taskDetails.png)
+![FragmentTextView](screenshots/fragment.png)
