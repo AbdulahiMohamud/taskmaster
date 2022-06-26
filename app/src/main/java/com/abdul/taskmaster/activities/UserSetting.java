@@ -1,4 +1,4 @@
-package com.abdul.taskmaster;
+package com.abdul.taskmaster.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.abdul.taskmaster.R;
 
 public class UserSetting extends AppCompatActivity {
     // setup shared preferences

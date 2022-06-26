@@ -1,8 +1,10 @@
-package com.abdul.taskmaster;
+package com.abdul.taskmaster.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.abdul.taskmaster.R;
 
 public class AllTasks extends AppCompatActivity {
 

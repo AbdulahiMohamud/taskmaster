@@ -1,15 +1,18 @@
-package com.abdul.taskmaster;
+package com.abdul.taskmaster.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.abdul.taskmaster.R;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TASK_TITLE = "task title";
@@ -29,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
         goToUSerSettingBtn();
 
         // tasks hard coded in task that re-route to task details activity
-        taskClean();
-        taskGym();
-        taskStudy();
+//        taskClean();
+//        taskGym();
+//        taskStudy();
 
 
 
@@ -81,44 +84,44 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void taskClean(){
-        Button cleanTaskBtn = findViewById(R.id.cleanTaskButton);
+//    public void taskClean(){
+//        Button cleanTaskBtn = findViewById(R.id.cleanTaskButton);
+//
+//        cleanTaskBtn.setOnClickListener(v -> {
+//            Intent goToTaskDetails = new Intent(MainActivity.this, TaskDetails.class);
+//            // include an extra with the event
+//            goToTaskDetails.putExtra(TASK_TITLE,cleanTaskBtn.getText().toString());
+//            // start the activity
+//            startActivity(goToTaskDetails);
+//
+//        });
+//    }
 
-        cleanTaskBtn.setOnClickListener(v -> {
-            Intent goToTaskDetails = new Intent(MainActivity.this, TaskDetails.class);
-            // include an extra with the event
-            goToTaskDetails.putExtra(TASK_TITLE,cleanTaskBtn.getText().toString());
-            // start the activity
-            startActivity(goToTaskDetails);
+//    public void taskGym(){
+//        Button gymTaskBtn = findViewById(R.id.gymTaskButton);
+//
+//        gymTaskBtn.setOnClickListener(v -> {
+//            Intent goToTaskDetails = new Intent(MainActivity.this, TaskDetails.class);
+//            // include an extra with the event
+//            goToTaskDetails.putExtra(TASK_TITLE,gymTaskBtn.getText().toString());
+//            // start the activity
+//            startActivity(goToTaskDetails);
+//
+//        });
+//    }
 
-        });
-    }
-
-    public void taskGym(){
-        Button gymTaskBtn = findViewById(R.id.gymTaskButton);
-
-        gymTaskBtn.setOnClickListener(v -> {
-            Intent goToTaskDetails = new Intent(MainActivity.this, TaskDetails.class);
-            // include an extra with the event
-            goToTaskDetails.putExtra(TASK_TITLE,gymTaskBtn.getText().toString());
-            // start the activity
-            startActivity(goToTaskDetails);
-
-        });
-    }
-
-    public void taskStudy(){
-        Button studyTaskBtn = findViewById(R.id.studyTaskButton);
-
-        studyTaskBtn.setOnClickListener(v -> {
-            Intent goToTaskDetails = new Intent(MainActivity.this, TaskDetails.class);
-            // include an extra with the event
-            goToTaskDetails.putExtra(TASK_TITLE,studyTaskBtn.getText().toString());
-            // start the activity
-            startActivity(goToTaskDetails);
-
-        });
-    }
+//    public void taskStudy(){
+//        Button studyTaskBtn = findViewById(R.id.studyTaskButton);
+//
+//        studyTaskBtn.setOnClickListener(v -> {
+//            Intent goToTaskDetails = new Intent(MainActivity.this, TaskDetails.class);
+//            // include an extra with the event
+//            goToTaskDetails.putExtra(TASK_TITLE,studyTaskBtn.getText().toString());
+//            // start the activity
+//            startActivity(goToTaskDetails);
+//
+//        });
+//    }
 
     public void updateUsername(){
         // get userName
@@ -128,6 +131,16 @@ public class MainActivity extends AppCompatActivity {
         // set UserName to view
         TextView userNameText = findViewById(R.id.homeTaskTitle);
         userNameText.setText(formatedUserNameTitle);
+    }
+
+    public void setUpTaskRecyclerView() {
+        // grab the recycler view by its id
+        RecyclerView taskRecyclerView = findViewById(R.id.recyclerView);
+        // set the layout manager of the recyclerview to a linearLayoutManeger
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+        // set the layout manager
+        taskRecyclerView.setLayoutManager(layoutManager);
+
     }
 
 
