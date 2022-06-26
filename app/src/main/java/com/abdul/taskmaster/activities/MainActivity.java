@@ -13,6 +13,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.abdul.taskmaster.R;
+import com.abdul.taskmaster.adapter.TaskRecyclerViewAdapter;
+import com.abdul.taskmaster.model.TaskModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TASK_TITLE = "task title";
@@ -35,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
 //        taskClean();
 //        taskGym();
 //        taskStudy();
+
+
+
+
+        setUpTaskRecyclerView();
 
 
 
@@ -140,6 +150,24 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         // set the layout manager
         taskRecyclerView.setLayoutManager(layoutManager);
+
+
+        // create the data using the model
+        List<TaskModel> tasks = new ArrayList<>();
+        // make the data
+
+        tasks.add(new TaskModel("GYM"));
+        tasks.add(new TaskModel("CLEANING"));
+        tasks.add(new TaskModel("STUDYING"));
+        tasks.add(new TaskModel("TAXES"));
+
+        //give  context to are adapter to reroute when Recycler view is clicked
+
+        // create and attach the adapter
+        TaskRecyclerViewAdapter adapter = new TaskRecyclerViewAdapter(tasks,this);
+        //set the adapter to the recyclerview
+        taskRecyclerView.setAdapter(adapter);
+
 
     }
 
