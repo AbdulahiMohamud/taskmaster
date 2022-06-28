@@ -11,43 +11,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="286dp"
-        android:layout_marginBottom="79dp"
+        android:layout_marginTop="104dp"
         android:text="TASK TITLE"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView7"
-        android:layout_width="344dp"
-        android:layout_height="205dp"
+        android:id="@+id/tasksDescripOnDetails"
+        android:layout_width="260dp"
+        android:layout_height="150dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="260dp"
-        android:text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia. Quo neque error repudiandae fuga? "
+        android:layout_marginBottom="264dp"
+        android:text="Lorem ipsum."
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="96dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="172dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="14dp"
-        android:text="Task Description"
-        app:layout_constraintBottom_toTopOf="@+id/textView7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
+        android:id="@+id/taskDetailStatus"
+        android:layout_width="89dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="160dp"
+        android:text="Status"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.956" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/taskDateMadeOnDeatils"
+        android:layout_width="71dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="160dp"
+        android:text="Date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -45,15 +45,19 @@ public class TaskRecyclerViewAdapter extends RecyclerView.Adapter<TaskRecyclerVi
         TextView taskFragmentTextView = holder.itemView.findViewById(R.id.taskFragmentsTextView);
         // get the name from the list
         // position is the index of when the data lies in the recycler List and is given.
-        String taskName = tasks.get(position).getName();
+        TaskModel taskList = tasks.get(position);
         // set the fragment text view to  the task name
-        taskFragmentTextView.setText((position + 1) +" :"+ taskName);
+        taskFragmentTextView.setText((position + 1) +" :"+ taskList.getName() + "\n" + taskList.getDateCreated()+
+                "\n" + taskList.getState());
 
         // bind the onclick listener
         View taskViewHolder = holder.itemView;
         taskViewHolder.setOnClickListener(v -> {
             Intent goToTaskDetails = new Intent(callingActivity, TaskDetails.class);
-            goToTaskDetails.putExtra(MainActivity.TASK_TITLE,taskName);
+            goToTaskDetails.putExtra(MainActivity.TASK_TITLE,taskList.getName());
+            goToTaskDetails.putExtra(MainActivity.TASK_DESCRIPTION,taskList.getDescription());
+            goToTaskDetails.putExtra(MainActivity.TASK_STATUS,taskList.getState());
+            goToTaskDetails.putExtra(MainActivity.TASK_CREATION,taskList.getDateCreated());
             callingActivity.startActivity(goToTaskDetails);
         });
 
