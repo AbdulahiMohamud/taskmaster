@@ -10,7 +10,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="44dp"
         android:text="All Tasks"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -27,10 +27,10 @@
         android:layout_marginBottom="371dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.374"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.458"
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button

@@ -21,3 +21,10 @@
 ![Recyclerviewlist](screenshots/Recyclerviewlist.png)
 ![Task Details](screenshots/taskDetails.png)
 ![FragmentTextView](screenshots/fragment.png)
+
+# Lab 28
+
+
+![Recyclerviewlist](screenshots/newhome.png)
+![Task Details](screenshots/detail.png)
+![Status Bar](screenshots/status.png)
